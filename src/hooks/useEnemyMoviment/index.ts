@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { EDirection } from '../../settings/constants';
 import { handleNextPosition } from '../../contexts/canvas/helpers';
   
-function useEnemyMoviment(initialPosition) {
+function useEnemyMovement(initialPosition) {
   const [positionState, updatePositionState] = useState(initialPosition);    
   const [direction, updateDirectionState] = useState(EDirection.RIGHT);
 
@@ -27,5 +27,5 @@ function useEnemyMoviment(initialPosition) {
   }
 }
 
-export default useEnemyMoviment;
+export default useEnemyMovement;
 

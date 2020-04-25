@@ -2,16 +2,16 @@ import React from 'react';
 import { TILE_SIZE, DEMON_TILE_SIZE, EDirection } from '../../settings/constants';
 
 import './index.css';
-import useEnemyMoviment from '../../hooks/useEnemyMoviment';
+import useEnemyMovement from '../../hooks/useEnemyMoviment';
 
 const Demon = () => {
-  const moviment = useEnemyMoviment({ x: 5, y: 5 });
+  const moviment = useEnemyMovement({ x: 5, y: 5 });
 
   return (
     <div
       style={{
         position: "absolute",
-        bottom: TILE_SIZE * moviment.position.y,
+        top: TILE_SIZE * moviment.position.y,
         left: TILE_SIZE * moviment.position.x,
         width: DEMON_TILE_SIZE,
         height: DEMON_TILE_SIZE,
