@@ -21,6 +21,11 @@ function useEnemyMovement(initialPosition) {
       updatePositionState(movement.nextPosition);
     }
 
+    if (movement.nextMove.dead) {
+      alert("Você morreu!!!");
+      window.location.reload();
+    }
+
   }, 1000);
   
 
